@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Degital Clock</title>
+    </head>
+    <body>
+        <section class="container">
+            <h1>time now is</h1>
+            <div class="time-box">
+                <div class="same-color">
+                    <h2 class="hours"></h2>
+                    <span>hours</span>
+                </div>
+                <div class="same-color">
+                    <h2 class="minutes"></h2>
+                    <span>minutes</span>
+                </div>
+                <div class="seconds">
+                    <h2 class="second"></h2>
+                    <span>seconds</span>
+                </div>
+                <h3></h3>
+            </div>
+        </section>
+        <script>
+            setInterval(function(){
+                var time = new Date(),
+                    hour = time.getHours(),
+                    minutes = time.getMinutes(),
+                    seconds = time.getSeconds();
+                if (hour >= 12){
+                    document.querySelector(".time-box h3").textContent = "pm"
+                } else {
+                    document.querySelector(".time-box h3").textContent = "am"
+                }
+                if (hour % 12 < 10){
+                    document.querySelector(".hours").textContent = "0" + (hour % 12);
+                } else {
+                    document.querySelector(".hours").textContent = (hour % 12);
+                }
+                if (minutes < 10){
+                    document.querySelector(".minutes").textContent = "0" + minutes;
+                } else {
+                    document.querySelector(".minutes").textContent = minutes;
+                }
+                if (seconds < 10){
+                    document.querySelector(".second").textContent = "0" + seconds;
+                } else {
+                    document.querySelector(".second").textContent = seconds;
+                }
+            }, 1000)
+        </script>
+    </body>
+</html>

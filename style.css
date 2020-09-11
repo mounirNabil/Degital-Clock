@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body{
+    background: #090a22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden
+}
+.container{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container h1 {
+    color: #FFF;
+    text-transform: capitalize;
+    font-size: 2em;
+    letter-spacing: 6px;
+    padding: 5px;
+}
+.container .time-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    padding: 10px;
+    
+}
+.container .time-box div{
+    position: relative;
+    margin-right: 10px;
+    width: 16%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0,0,0, 0.3));
+}
+.container .time-box div, .container .time-box h3{
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0,0,0, 0.3));
+}
+.container .time-box .same-color{
+    background: #2295f5;
+    
+}
+.container .time-box div h2{
+    color: #FFF;
+    font-size: 3em;
+    margin: 24px auto;
+    letter-spacing: 8px
+
+}
+.container .time-box div span{
+    display: block;
+    background: #1479ce;
+    width: 100%;
+    padding: 14px 5px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+}
+.container .time-box .seconds{
+    background: #fe006b
+}
+.container .time-box .seconds span{
+    background: #e90062
+}
+.time-box h3{
+    padding: 12px 18px;
+    background: #fcfafc;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+@media only screen and (min-device-width: 325px) and (max-device-width: 768px) {
+    .container{
+        width: 100%;
+    }
+    .time-box div{
+        width: 24% !important;
+        height: 115px !important
+            
+    }
+    .time-box div h2{
+        font-size: 2em !important
+    }
+    .time-box div span{
+        font-size: 10px
+    }
+}
